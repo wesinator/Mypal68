@@ -1112,7 +1112,7 @@ bool gfxPlatform::IsDXP016Blocked() {
 int32_t gfxPlatform::MaxTextureSize() {
   // Make sure we don't completely break rendering because of a typo in the
   // pref or whatnot.
-  const int32_t kMinSizePref = 2048;
+  const int32_t kMinSizePref = 1024;
   return std::max(kMinSizePref, gfxPrefs::MaxTextureSizeDoNotUseDirectly());
 }
 

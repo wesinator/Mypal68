@@ -759,13 +759,13 @@ bool DeviceManagerD3D9::VerifyCaps() {
     return false;
   }
 
-  if (caps.MaxTextureHeight < 4096 || caps.MaxTextureWidth < 4096) {
+  if (caps.MaxTextureHeight < 1024 || caps.MaxTextureWidth < 1024) {
     return false;
   }
   mMaxTextureSize = std::min(caps.MaxTextureHeight, caps.MaxTextureWidth);
 
-  if ((caps.PixelShaderVersion & 0xffff) < 0x200 ||
-      (caps.VertexShaderVersion & 0xffff) < 0x200) {
+  if ((caps.PixelShaderVersion & 0xffff) < 0x001 ||
+      (caps.VertexShaderVersion & 0xffff) < 0x001) {
     return false;
   }
 
